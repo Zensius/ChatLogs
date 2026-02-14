@@ -15,7 +15,7 @@ st.set_page_config(page_title= "Kelvin and JingJing's love story",
                    layout="wide")
 
 curr_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
-data_file = curr_dir / "C:\\Users\\Kelvin\\Documents\\Python Scripts\\ChatLogs\\cleaned_discord_data.csv"
+data_file = curr_dir / "cleaned_discord_data.csv"
 
 # Load the data
 df = pd.read_csv(data_file)
@@ -38,10 +38,10 @@ with st.container():
         
     screen1, screen2 = st.columns(2)
     with screen1:
-        st.image("ChatLogs\\img\\first_message.png")
+        st.image(curr_dir + "\\img\\first_message.png")
         st.caption("Me attempting to talk to the pretty girl more")
     with screen2:
-        st.image("ChatLogs\\img\\important_question.png")
+        st.image( curr_dir + "\\img\\important_question.png")
         st.caption("Walking down cringey memory lane")
 
 
