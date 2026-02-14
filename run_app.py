@@ -38,10 +38,10 @@ with st.container():
         
     screen1, screen2 = st.columns(2)
     with screen1:
-        st.image(curr_dir + "\\img\\first_message.png")
+        st.image(curr_dir / "first_message.png")
         st.caption("Me attempting to talk to the pretty girl more")
     with screen2:
-        st.image( curr_dir + "\\img\\important_question.png")
+        st.image(curr_dir / "important_question.png")
         st.caption("Walking down cringey memory lane")
 
 
