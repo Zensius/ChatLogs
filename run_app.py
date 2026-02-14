@@ -7,13 +7,18 @@ import plotly.express as px
 import pytz
 import re
 from collections import Counter
+from pathlib import Path
 
 
 st.set_page_config(page_title= "Kelvin and JingJing's love story",
                    page_icon= ":heart:",
                    layout="wide")
 
-df = pd.read_csv("C:\\Users\\Kelvin\\Documents\\Python Scripts\\ChatLogs\\cleaned_discord_data.csv")
+curr_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
+data_file = curr_dir / "C:\\Users\\Kelvin\\Documents\\Python Scripts\\ChatLogs\\cleaned_discord_data.csv"
+
+# Load the data
+df = pd.read_csv(data_file)
 
 st.title("Happy Valentine Bunny! :heart:")
 
